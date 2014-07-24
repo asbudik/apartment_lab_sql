@@ -65,8 +65,8 @@ Write down the following sql statements that are required to solve the following
   DELETE FROM owners WHERE name='Janet';
 
 // 15. Show all of the properties in alphabetical order that are not named Archstone and do not have an id of 3 or 5. 
-  SELECT property_id, property_name FROM properties WHERE property_id != 3 AND property_id != 5 AND property_name != 'Archstone';
-
+  SELECT * FROM properties WHERE property_name NOT IN ('Archstone') AND property_id NOT IN (3,5);
+  
 // 16. Count the total number of rows in the properties table.
   SELECT COUNT(*) FROM properties;
 
